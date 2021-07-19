@@ -47,7 +47,6 @@ summary(hw$weight)
 interview <- read.dta('3. DataMerges/InterviewMerges/AllMerged_Interview_CRFs_results.dta')
 interview$ptidno <- str_sub(interview$ptidno, 1, 8)
 
-
 # enroll
 enroll <- interview %>% subset(visit=='Enrollment') %>% unique()
 enroll$enroldate <- as.Date(enroll$enroldate, '%m/%d/%y')
